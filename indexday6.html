@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Task 1 Date 26.10.2022
+        
+        class movie {_
+        constructor(title,studio,rating)
+        {
+         this.title = title;
+         this.studio=studio;
+         this.rating=rating;
+         if (rating==null){
+            return this.ratting = "PG";
+        }
+        else 
+        {
+            return this.rating = rating;
+        }}
+        getPG(array) 
+        {
+        var result = array.filter((element) => element.rating =="PG")
+        return result
+        }}
+let movie1 = new movie ("prince","AVM studios","PG13")
+let movie2=new movie("Casino Royale","Econ productions","PG13")
+let movie3=new movie("t","thirdstudios");
+let movie4=new movie("r","fourtstudios");
+const array=[movie1,movie2,movie3,movie4]
+    console.log(movie1)
+    console.log(movie2)
+    console.log(movie3)
+    console.log(movie4)
+    console.log(movie2.getPG(array));
+// Task 2
+class circle{
+    constructor(radious,color){
+        this.radious = radious;
+        this.color = color;
+    }
+    setRadious(radiouss){
+        this.radious=radiouss;
+    }
+    setColor(paint){
+        this.color=paint;
+    }
+    getRadious(){
+        return(`The radious of circle is ${this.radious}`)
+    }
+    getColor(){
+        return(`The color of circle is ${this.color}`)
+    }
+    
+getArea(){
+    return(`The area of circle is ${(3.14*(this.radious*this.radious))} `)
+ }
+getCircumfrance()
+{
+    return(`The area of circle is ${(2*3.14*(this.radious))}`)
+}
+    }
+    circle1=new circle("7","yellow")
+    circle2=new circle("3","pink")
+    circle1.setRadious(14)
+    circle1.setColor("violet")
+    console.log(circle1)
+    console.log(circle1.getRadious())
+    console.log(circle1.getColor())
+    console.log(circle1.getArea())
+    console.log(circle1.getCircumfrance())
+
+
+
+// Task 3 wrirte a "person" class to hold all the details
+        class person{
+            constructor(name,place,job)
+            {
+                this.name = name;
+                this.place = place;
+                this.job = job;
+            }
+            getDetails(){
+                return(`The name of the person is ${this.name} works at ${this.place}`)
+
+            }
+        }
+        let person1 = new person ("selva","chennai","FSD")
+        let person2= new person ("narasimman","kanchipuram","teacher")
+        console.log(person1)
+        console.log(person2)
+        console.log(person2.getDetails())
+        console.log(person1.getDetails())
+        //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        // Task 4 Write a class to calculate uber price
+        class Uberoriginal{
+            constructor(distance,rate,waitingperiod){
+                this.distance=distance;
+                this.rate=rate;
+                this.waitingperiod=waitingperiod;
+            }
+            setDistance(dist)
+            {
+                this.distance=dist;
+            }
+            getRideDetails(){
+                return(`The distance of ride is ${this.distance} with the rate of ${this.rate} with a waiting period of ${this.waitingperiod}`)
+                        }
+                    
+                    getPrice()
+                    {
+                        let price = (this.distance*this.rate) + (5*this.waitingperiod)
+                        return price;
+                    }}
+                    let Ubercopy = new Uberoriginal (200,20,10);
+                    Ubercopy.setDistance(300);
+                    console.log(Ubercopy.getPrice())
+                    console.log(Ubercopy.getRideDetails())
+        
+    </script>
+    
+</body>
+</html>
